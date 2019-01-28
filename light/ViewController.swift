@@ -9,8 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var lightOn = true
     @IBAction func buttonPressed(_ sender: Any) {
+        lightOn = !lightOn
+        if lightOn {
+            view.backgroundColor = .white
+        } else{
+            view.backgroundColor = .black
+        }
     }
     @IBOutlet weak var lightButton: UIButton!
     override func viewDidLoad() {
